@@ -42,7 +42,7 @@ def time_in_bounds(df : pd.DataFrame, start_date : str, end_date : str) -> pd.Se
 def supplier_check(df : pd.DataFrame) -> pd.Series :
     return df["supplier"].isin(suppliers)
 
-def run_quality_checkes( df : pd.DataFrame, start_date: str = None, end_date: str = None) -> tuple[pd.DataFrmae, pd.DataFrame]
+def run_quality_checks( df : pd.DataFrame, start_date: str = None, end_date: str = None) -> tuple[pd.DataFrmae, pd.DataFrame]
     # returns [valid, rejected]
     df = df.copy()
     df["rejected_reason"] = ""
@@ -112,4 +112,3 @@ def run_quality_checkes( df : pd.DataFrame, start_date: str = None, end_date: st
 def save_rejected(rejected : pd.DataFrame, output_path : str) -> None :
     if len(rejected) > 0 :
         rejected.to_csv(output_path, index = False)
-        
