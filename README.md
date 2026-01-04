@@ -1,4 +1,4 @@
-# Market Data Pipeline
+# Beauty Market Price Data ETL Pipeline
 
 How come everytime I try to purchase an East Asian beauty product, the identical product has a different price depending on where I look. 
 I built this tool which takes a search input from the user for the product they want, then scrapes that product info from 10 different suppliers to see where is selling for the cheapest
