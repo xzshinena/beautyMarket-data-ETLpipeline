@@ -1,6 +1,8 @@
 # Market Data Pipeline
 
-A data pipeline that scrapes product prices from multiple online stores, computes metrics, and identifies the cheapest venue for each product.
+How come everytime I try to purchase an East Asian beauty product, the identical product has a different price depending on where I look. 
+I built this tool which takes a search input from the user for the product they want, then scrapes that product info from 10 different suppliers to see where is selling for the cheapest
+More formally, it's an ETL data pipeline that scrapes product prices from multiple online stores, computes metrics, and identifies the cheapest venue for each product.
 
 ## Setup
 
@@ -23,11 +25,18 @@ python main.py --start 2025-01-01 --end 2025-12-31 --compare --sources kiyoko oo
 - `--search` - Product search term
 - `--compare` - Enable price comparison
 
-### Available Sources
+### Available Suppliers
 
-Shopify stores (JSON): kiyoko, oomomo, sukoshi, komiko, lamour, kiokii, axiastation
-
-Other: oliveyoung (Playwright)
+- Olive Young
+- Sukoshi Mart
+- Kiokii &
+- Lamour
+- Oomomo
+- Kiyoko Beauty
+- Komiko Beauty
+- Axia Station
+- M Beauty
+- Cosme
 
 ## Output
 
@@ -38,7 +47,7 @@ Results are saved to `data/processed/`:
 - `price_comparison.csv` - Cheapest venue per product
 - `comparison_report.txt` - Human-readable summary
 
-## Project Structure
+## Pipeline Structure
 
 ```
 src/
